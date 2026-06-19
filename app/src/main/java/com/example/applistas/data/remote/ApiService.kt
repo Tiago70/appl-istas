@@ -7,9 +7,9 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ApiService {
-    @POST("checklist/sync")
+    @POST("/checklists/sync")
     suspend fun syncChecklist(@Body checklists: List<Checklist>): Response<Unit>
 
-    @POST("note/sync")
+    @POST("/notes/sync")
     suspend fun syncNotes(@Body notes: List<Note>): Response<Unit>
 }
